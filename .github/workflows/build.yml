@@ -1,5 +1,5 @@
 name: build
-
+#github 提交的检查  ； github acction
 on:
   push:
     branches:
@@ -17,7 +17,7 @@ jobs:
   build-rust:
     strategy:
       matrix:
-        platform: [ubuntu-latest]
+        platform: [ubuntu-latest,macOS]
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v4
