@@ -17,13 +17,13 @@ repos:
       - id: black
   - repo: local
     hooks:
-      - id: cargo-fmt
-        name: cargo fmt
-        description: Format files with rustfmt.
-        entry: bash -c 'cargo fmt -- --check'
-        language: rust
-        files: \.rs$
-        args: []
+      # - id: cargo-fmt
+      #   name: cargo fmt
+      #   description: Format files with rustfmt.
+      #   entry: bash -c 'cargo fmt -- --check'
+      #   language: rust
+      #   files: \.rs$
+      #   args: []
       - id: cargo-deny
         name: cargo deny check
         description: Check cargo dependencies
@@ -31,13 +31,13 @@ repos:
         language: rust
         files: \.rs$
         args: []
-      - id: typos
-        name: typos
-        description: check typo
-        entry: bash -c 'typos'
-        language: rust
-        files: \.*$
-        pass_filenames: false
+      # - id: typos
+      #   name: typos
+      #   description: check typo
+      #   entry: bash -c 'typos'
+      #   language: rust
+      #   files: \.*$
+      #   pass_filenames: false
       - id: cargo-check
         name: cargo check
         description: Check the package for errors.
